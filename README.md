@@ -1,5 +1,7 @@
 # lnav-chia
+Chia log format decoder for [lnav](https://lnav.org/)
 
+![example](example.png "lnav example")
 
 ## Install
 ```
