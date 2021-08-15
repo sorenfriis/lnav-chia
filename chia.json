@@ -1,0 +1,35 @@
+{
+    "chia_log" : {
+        "title" : "Chia Log Format",
+        "description" : "Log format used in chia log files.",
+        "url": "https://www.chia.net/",
+        "file-pattern": "debug.log",
+        "regex" : {
+            "std" : {
+                "pattern" : "^(?<timestamp>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}) (?<component>\\w+) (?<module>[^:]*): (?<level>\\w+)\\s*(?<body>.*)$"
+            }
+        },
+        "level-field" : "level",
+        "level" : {
+            "error" : "ERROR",
+            "warning" : "WARNING",
+            "info" : "INFO",
+            "debug" : "DEBUG"
+        },
+        "value" : {
+            "component" : {
+                "kind" : "string",
+                "identifier" : true
+            },
+            "module": {
+                "kind": "string",
+                "identifier": true
+            }
+        },
+        "sample" : [
+            {
+                "line" : "2021-08-02T22:34:40.168 harvester chia.plotting.plot_tools: WARNING  Directory: /media/chia/ does not exist."
+            }
+        ]
+    }
+}
